@@ -1,5 +1,5 @@
 {
-    "name": "hans-thomas/filament-filterable-overview-widget",
+    "name": "hans-thomas/filterable-overview-widget",
     "description": "This widget enables you to filter your overview data and apply conditions on your stats.",
     "keywords": [
         "hans-thomas",
@@ -9,10 +9,10 @@
         "filament-widget",
         "filterable stats overview widget"
     ],
-    "homepage": "https://github.com/hans-thomas/filament-filterable-overview-widget",
+    "homepage": "https://github.com/hans-thomas/filterable-overview-widget",
     "support": {
-        "issues": "https://github.com/hans-thomas/filament-filterable-overview-widget/issues",
-        "source": "https://github.com/hans-thomas/filament-filterable-overview-widget"
+        "issues": "https://github.com/hans-thomas/filterable-overview-widget/issues",
+        "source": "https://github.com/hans-thomas/filterable-overview-widget"
     },
     "license": "MIT",
     "authors": [
@@ -23,8 +23,8 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "filament/filament": "^3.0",
+        "php": "^8.2",
+        "filament/filament": "^4.0",
         "spatie/laravel-package-tools": "^1.15.0"
     },
     "require-dev": {
@@ -41,13 +41,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Hans\\FilamentFilterableOverviewWidget\\": "src/",
-            "Hans\\FilamentFilterableOverviewWidget\\Database\\Factories\\": "database/factories/"
+            "Hans\\FilterableOverviewWidget\\": "src/",
+            "Hans\\FilterableOverviewWidget\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Hans\\FilamentFilterableOverviewWidget\\Tests\\": "tests/"
+            "Hans\\FilterableOverviewWidget\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -67,7 +67,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Hans\\FilamentFilterableOverviewWidget\\FilamentFilterableOverviewWidgetServiceProvider"
+                "Hans\\FilterableOverviewWidget\\FilterableOverviewWidgetServiceProvider"
             ]
         }
     },
