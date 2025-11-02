@@ -1,4 +1,4 @@
-# Filament Filterable Overview widget
+# Filterable Overview widget
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/hans-thomas/filament-filterable-overview-widget.svg?style=flat-square)](https://packagist.org/packages/hans-thomas/filterablestatsoverviewwidget)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/hans-thomas/filament-filterable-overview-widget/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/hans-thomas/filterablestatsoverviewwidget/actions?query=workflow%3Arun-tests+branch%3Amain)
@@ -14,22 +14,22 @@ This widget enables you to filter your overview data and apply conditions on you
 You can install the package via composer:
 
 ```bash
-composer require hans-thomas/filament-filterable-overview-widget
+composer require hans-thomas/filterable-overview-widget
 ```
 
-![](./assets/screenshot.png "screenshot of filament filterable overview widget")
+![](./assets/screenshot.png "screenshot of filterable overview widget")
 
 ## Usage
 
 Create your widget using the command:
 
 ```shell
-> php artisan make:filament-filterable-overview-widget -h
+> php artisan make:filterable-overview-widget -h
 Description:
   Create a Filterable stats overview widget class
 
 Usage:
-  make:filament-filterable-overview-widget [options] [--] <name>
+  make:filterable-overview-widget [options] [--] <name>
 
 Arguments:
   name                  Name of the widget
