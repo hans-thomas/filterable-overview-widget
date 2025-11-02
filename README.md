@@ -1,6 +1,6 @@
 # Filterable Overview widget
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/hans-thomas/filament-filterable-overview-widget.svg?style=flat-square)](https://packagist.org/packages/hans-thomas/filterablestatsoverviewwidget)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/hans-thomas/filterable-overview-widget.svg?style=flat-square)](https://packagist.org/packages/hans-thomas/filterable-overview-widget)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/hans-thomas/filament-filterable-overview-widget/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/hans-thomas/filterablestatsoverviewwidget/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/hans-thomas/filament-filterable-overview-widget/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/hans-thomas/filterablestatsoverviewwidget/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/hans-thomas/filament-filterable-overview-widget.svg?style=flat-square)](https://packagist.org/packages/hans-thomas/filterablestatsoverviewwidget)
