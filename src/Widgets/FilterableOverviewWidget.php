@@ -1,6 +1,6 @@
 <?php
 
-namespace Hans\FilamentFilterableOverviewWidget\Widgets;
+namespace Hans\FilterableOverviewWidget\Widgets;
 
 use Closure;
 use Filament\Actions\Concerns\InteractsWithActions;

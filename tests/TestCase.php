@@ -1,6 +1,6 @@
 <?php
 
-namespace Hans\FilamentFilterableOverviewWidget\Tests;
+namespace Hans\FilterableOverviewWidget\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
@@ -12,7 +12,7 @@ use Filament\Notifications\NotificationsServiceProvider;
 use Filament\Support\SupportServiceProvider;
 use Filament\Tables\TablesServiceProvider;
 use Filament\Widgets\WidgetsServiceProvider;
-use Hans\FilamentFilterableOverviewWidget\FilamentFilterableOverviewWidgetServiceProvider;
+use Hans\FilamentFilterableOverviewWidget\FilterableOverviewWidgetServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
@@ -44,7 +44,7 @@ class TestCase extends Orchestra
             SupportServiceProvider::class,
             TablesServiceProvider::class,
             WidgetsServiceProvider::class,
-            FilamentFilterableOverviewWidgetServiceProvider::class,
+            FilterableOverviewWidgetServiceProvider::class,
         ];
     }
 

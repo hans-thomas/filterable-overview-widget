@@ -1,18 +1,18 @@
 <?php
 
-namespace Hans\FilamentFilterableOverviewWidget;
+namespace Hans\FilterableOverviewWidget;
 
-use Hans\FilamentFilterableOverviewWidget\Commands\FilamentFilterableOverviewWidgetCommand;
+use Hans\FilterableOverviewWidget\Commands\FilterableOverviewWidgetCommand;
 use Illuminate\Filesystem\Filesystem;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class FilamentFilterableOverviewWidgetServiceProvider extends PackageServiceProvider
+class FilterableOverviewWidgetServiceProvider extends PackageServiceProvider
 {
-    public static string $name = 'FilamentFilterableOverviewWidget';
+    public static string $name = 'FilterableOverviewWidget';
 
-    public static string $viewNamespace = 'filamentFilterableOverviewWidget';
+    public static string $viewNamespace = 'filterableOverviewWidget';
 
     public function configurePackage(Package $package): void
     {
@@ -25,7 +25,7 @@ class FilamentFilterableOverviewWidgetServiceProvider extends PackageServiceProv
             ->hasCommands($this->getCommands())
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
-                    ->askToStarRepoOnGitHub('hans-thomas/filament-filterable-overview-widget');
+                    ->askToStarRepoOnGitHub('hans-thomas/filterable-overview-widget');
             });
 
         if (file_exists($package->basePath('/../resources/views'))) {
@@ -41,15 +41,15 @@ class FilamentFilterableOverviewWidgetServiceProvider extends PackageServiceProv
         if (app()->runningInConsole()) {
             foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
                 $this->publishes([
-                    $file->getRealPath() => base_path("stubs/filamentFilterableOverviewWidget/{$file->getFilename()}"),
-                ], 'filamentFilterableOverviewWidget-stubs');
+                    $file->getRealPath() => base_path("stubs/filterableOverviewWidget/{$file->getFilename()}"),
+                ], 'filterableOverviewWidget-stubs');
             }
         }
     }
 
     protected function getAssetPackageName(): ?string
     {
-        return 'hans-thomas/filamentFilterableOverviewWidget';
+        return 'hans-thomas/filterableOverviewWidget';
     }
 
     /**
@@ -58,7 +58,7 @@ class FilamentFilterableOverviewWidgetServiceProvider extends PackageServiceProv
     protected function getCommands(): array
     {
         return [
-            FilamentFilterableOverviewWidgetCommand::class,
+            FilterableOverviewWidgetCommand::class,
         ];
     }
 }

@@ -1,14 +1,14 @@
 <?php
 
-namespace Hans\FilamentFilterableOverviewWidget\Commands;
+namespace Hans\FilterableOverviewWidget\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 
-class FilamentFilterableOverviewWidgetCommand extends Command
+class FilterableOverviewWidgetCommand extends Command
 {
     public $signature = '
-    make:filament-filterable-overview-widget
+    make:filterable-overview-widget
     {name : Name of the widget}
     {--p|panel=default : Select a panel}
     ';
