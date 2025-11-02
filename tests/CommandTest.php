@@ -14,7 +14,7 @@ it(
         $file = app_path('Filament/Widgets/MyFilterableStatsOverviewWidget.php');
         expect($file)->not->toBeFile();
 
-        artisan('make:filament-filterable-overview-widget MyFilterableStatsOverviewWidget')
+        artisan('make:filterable-overview-widget MyFilterableStatsOverviewWidget')
             ->assertExitCode(0);
 
         expect($file)->toBeFile();
@@ -24,7 +24,7 @@ it(
 it(
     'Check make command output',
     function () {
-        artisan('make:filament-filterable-overview-widget MyFilterableStatsOverviewWidget')
+        artisan('make:filterable-overview-widget MyFilterableStatsOverviewWidget')
             ->expectsOutput('Widget class created successfully.')
             ->assertExitCode(0);
     }
@@ -36,7 +36,7 @@ it(
         $file = app_path('Filament/Writers/Widgets/MyFilterableStatsOverviewWidget.php');
         expect($file)->not->toBeFile();
 
-        artisan('make:filament-filterable-overview-widget --panel writers MyFilterableStatsOverviewWidget')
+        artisan('make:filterable-overview-widget --panel writers MyFilterableStatsOverviewWidget')
             ->assertExitCode(0);
 
         expect($file)->toBeFile();
@@ -48,7 +48,7 @@ it(
     function () {
         $file = app_path('Filament/Widgets/MyFilterableStatsOverviewWidget.php');
 
-        artisan('make:filament-filterable-overview-widget MyFilterableStatsOverviewWidget')
+        artisan('make:filterable-overview-widget MyFilterableStatsOverviewWidget')
             ->assertExitCode(0);
 
         expect($file)
@@ -61,7 +61,7 @@ it(
 namespace App\Filament\Widgets;
 
 use Closure;
-use Hans\FilamentFilterableOverviewWidget\Widgets\FilterableOverviewWidget as BaseWidget;
+use Hans\FilterableOverviewWidget\Widgets\FilterableOverviewWidget as BaseWidget;
 
 class MyFilterableStatsOverviewWidget extends BaseWidget
 {
