@@ -7,12 +7,12 @@ use Filament\Actions\Concerns\InteractsWithActions;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
-use Filament\Forms\Form;
 use Filament\Pages\Concerns\InteractsWithFormActions;
+use Filament\Schemas\Schema;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 
 /**
- * @property Form $form
+ * @property Schema $form
  */
 abstract class FilterableOverviewWidget extends BaseWidget implements HasForms
 {
@@ -20,9 +20,9 @@ abstract class FilterableOverviewWidget extends BaseWidget implements HasForms
     use InteractsWithFormActions;
     use InteractsWithForms;
 
-    protected static string $view = 'filamentFilterableOverviewWidget::filterable-overview';
+    protected string $view = 'filterableOverviewWidget::filterable-overview';
 
-    protected static ?string $pollingInterval = null;
+    protected ?string $pollingInterval = null;
 
     public ?int $item_id = null;
 
@@ -31,13 +31,21 @@ abstract class FilterableOverviewWidget extends BaseWidget implements HasForms
         return 4;
     }
 
-    public function form(Form $form): Form
+    public function form(Schema $schema): Schema
     {
-        return $form
-            ->schema(
+        return $schema
+            ->components(
                 [
                     Select::make('item_id')
-                        ->label($this->getItemLabel())
+                        ->label(
+                            function (Select $component) {
+                                if (filled($this->getItemLabel())) {
+                                    return $this->getItemLabel();
+                                }
+
+                                $component->hiddenLabel();
+                            }
+                        )
                         ->lazy()
                         ->afterStateUpdated(fn ($state) => $this->processFormData())
                         ->searchable()
