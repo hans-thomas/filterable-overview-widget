@@ -15,7 +15,6 @@ jobs:
         os: [ ubuntu-latest ]
         php: [ 8.2, 8.3, 8.4 ]
         laravel: [ 11.*,12.* ]
-        filament: [ 3.*,4.* ]
         stability: [ prefer-stable ]
         include:
           - laravel: 11.*
@@ -25,7 +24,7 @@ jobs:
             testbench: 10.*
             carbon: 3.*
 
-    name: P${{ matrix.php }} - L${{ matrix.laravel }}- F${{ matrix.filament }} - ${{ matrix.stability }} - ${{ matrix.os }}
+    name: P${{ matrix.php }} - L${{ matrix.laravel }} - ${{ matrix.stability }} - ${{ matrix.os }}
 
     steps:
       - name: Checkout code
@@ -45,7 +44,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer require "laravel/framework:${{ matrix.laravel }}" "filament/filament:${{ matrix.filament }}" "orchestra/testbench:${{ matrix.testbench }}" "nesbot/carbon:${{ matrix.carbon }}" --no-interaction --no-update
+          composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" "nesbot/carbon:${{ matrix.carbon }}" --no-interaction --no-update
           composer update --${{ matrix.stability }} --prefer-dist --no-interaction
 
       - name: List Installed Dependencies
