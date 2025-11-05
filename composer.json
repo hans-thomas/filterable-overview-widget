@@ -43,8 +43,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Hans\\FilterableOverviewWidget\\": "src/",
-            "Hans\\FilterableOverviewWidget\\Database\\Factories\\": "database/factories/"
+            "Hans\\FilterableOverviewWidget\\": "src/"
         }
     },
     "autoload-dev": {
