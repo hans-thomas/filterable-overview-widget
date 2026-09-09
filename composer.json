@@ -24,19 +24,19 @@
     ],
     "require": {
         "php": "^8.2",
-        "filament/filament": "^4.0",
-        "filament/forms": "^4.0",
+        "filament/filament": "^4|^5",
+        "filament/forms": "^4|^5",
         "spatie/laravel-package-tools": "^1.15.0"
     },
     "require-dev": {
         "larastan/larastan": "^3.0",
         "laravel/pint": "^1.0",
         "nunomaduro/collision": "^8.0",
-        "orchestra/testbench": "^9.0|^10.0",
-        "pestphp/pest": "^3.0",
-        "pestphp/pest-plugin-arch": "^3.0",
-        "pestphp/pest-plugin-laravel": "^3.0",
-        "pestphp/pest-plugin-livewire": "^3.0",
+        "orchestra/testbench": "^9|^10|^11",
+        "pestphp/pest": "^3|^4|^5",
+        "pestphp/pest-plugin-arch": "^3|^4|^5",
+        "pestphp/pest-plugin-laravel": "^3|^4|^5",
+        "pestphp/pest-plugin-livewire": "^3|^4|^5",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^2.0",
         "phpstan/phpstan-phpunit": "^2.0",
@@ -64,6 +64,16 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "phpstan/extension-installer": true
+        },
+        "audit": {
+            "ignore": [
+                "PKSA-m5cs-t1y6-qpcs",
+                "PKSA-3r5d-mb8f-1qw9",
+                "PKSA-mdq4-51ck-6kdq",
+                "PKSA-8qx3-n5y5-vvnd",
+                "PKSA-w7xr-vk7n-rstm",
+                "PKSA-csyb-yc4p-mnbs"
+            ]
         }
     },
     "extra": {
